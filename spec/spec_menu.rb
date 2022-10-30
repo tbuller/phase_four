@@ -24,7 +24,7 @@ RSpec.describe Order do
     menu = Order.new(io)
     result = menu.selection
 
-    expect(result).to eq 22
+    expect(result).to eq "Your total is £22"
 
   end  
  

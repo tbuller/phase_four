@@ -22,16 +22,16 @@ class Order
       "Tagine" => 14
     }
     total = 0
+    orders = []
     @io.puts menu.map { |k, v| "#{k} £#{v}" } 
     while true
       @io.puts "Please make your choice"
       input = @io.gets.chomp
       break if input == "done"
       total += menu[input]
+      orders << input
     end  
-    return total
+    orders.map { |o| print "#{o}, £#{menu[o]}\n" }
+    "Your total is £#{total}"
   end
-
-  def tally
-  end  
 end
